@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="item" wx:for="{{data}}" wx:key="item" data-item="{{item}}" bindtap="bindTo">
+    {{item.title}}
+  </view>
+</view>
