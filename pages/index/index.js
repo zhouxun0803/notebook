@@ -5,10 +5,16 @@ const app = getApp()
 Page({
   data: {
     data: [{
-      title: "uniapp和小程序面试题",
-      url: "/pages/link/link",
-      src: "https://blog.csdn.net/dev_zx/article/details/118764372"
-    }],
+        title: "uniapp和小程序面试题",
+        url: "/pages/link/link",
+        src: "https://blog.csdn.net/dev_zx/article/details/118764372"
+      },
+      {
+        title: "vue页面引入多个组件的方法",
+        url: "/pages/link/link",
+        src: "https://blog.csdn.net/dev_zx/article/details/117992060"
+      },
+    ],
   },
   // 事件处理函数
   bindTo(e) {

@@ -1,10 +1,11 @@
 /**index.wxss**/
 .container {
-  padding: 30rpx;
+  padding: 0 20rpx 20rpx;
 }
 
 .item {
   padding: 20rpx;
   background-color: #ccc;
   border-radius: 20rpx;
+  margin-top: 20rpx;
 }
