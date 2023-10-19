@@ -18,7 +18,9 @@ Page({
       success(res) {
         if (res.confirm) {
           wx.clearStorage();
-          that.onShow();
+          setTimeout(() => {
+            that.onShow();
+          }, 500)
         } else if (res.cancel) {}
       }
     })
@@ -50,6 +52,7 @@ Page({
         })
       }
     })
+    console.log(wx.getStorageSync('userInfo'), 3333)
     that.setData({
       userInfo: wx.getStorageSync('userInfo') || {},
     })

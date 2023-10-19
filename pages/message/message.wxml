@@ -7,7 +7,7 @@
       <view class="user-info">
         <view class="name flex-x">
           <text wx:if="{{userInfo.nickName}}">{{userInfo.nickName}}</text>
-          <text wx:else>工具箱</text>
+          <text wx:else>工具大全</text>
           <text wx:if="{{userInfo.gender==1}}" class="gender iconfont icon-nan" style="color: #10aeff;"></text>
           <text wx:if="{{userInfo.gender==2}}" class="gender iconfont icon-nv" style="color: #f37e7d;"></text>
         </view>
@@ -25,11 +25,11 @@
         <text>关于程序</text>
       </view>
       <view class="flex-x">
-        <text class="version">版本号1.1.4</text>
+        <text class="version">版本号1.1.5</text>
         <text class="iconfont icon-xiangyou pointer"></text>
       </view>
     </navigator>
-    <navigator class="user_list-item flex-x" hover-class="hover-result" url="/pages/web_view/web_view?url=https://mp.weixin.qq.com/s/tuo7G9NEbMLyzNjyxr5QmQ&title=帮助文档">
+    <navigator class="user_list-item flex-x" hover-class="hover-result" url="/pages/help/help">
       <view class="flex-x">
         <text class="iconfont icon-bangzhuwendang biaoshi logo"></text>
         <text>帮助文档</text>

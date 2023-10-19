@@ -6,6 +6,11 @@ Page({
    */
   data: {
     versionList: [{
+        version: "1.1.5",
+        date: "2023-10-19",
+        branch: "Features",
+        description: ["帮助文档开发"]
+      }, {
         version: "1.1.4",
         date: "2023-10-18",
         branch: "Features",

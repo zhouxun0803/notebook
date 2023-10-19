@@ -9,8 +9,8 @@
       <button class="save" type="primary" formType="submit">查询</button>
     </form>
     <view wx:if="{{data.length}}" class="data flex-x">
-      <image class="img" wx:for="{{data}}" wx:key="item" src="{{item}}" />
-      <view class="img"></view>
+      <image class="img" wx:for="{{data}}" wx:key="item" src="{{item}}" show-menu-by-longpress="{{true}}" />
+      <view wx:if="{{data.length%3!=0}}" class="img"></view>
     </view>
   </view>
 </view>

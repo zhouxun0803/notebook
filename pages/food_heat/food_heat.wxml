@@ -11,7 +11,7 @@
     <view wx:if="{{data.length}}" class="data">
       <view class="item bg-white" wx:for="{{data}}" wx:key="item">
         <view wx:if="{{item.name}}" class="data-item flex-x">
-        <image class="img" src="{{item.img}}"/>
+        <image class="img" src="{{item.img}}" show-menu-by-longpress="{{true}}"/>
           <view>
             <view class="title color-3">{{item.name}}</view>
             <view class="info color-3">{{item.desc}}</view>

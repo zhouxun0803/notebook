@@ -1,4 +1,3 @@
-<!--pages/version/version.wxml-->
 <view class="version-wrap">
   <view class="version-item" wx:for="{{versionList}}" wx:key="index">
     <view class="version-con flex-x">

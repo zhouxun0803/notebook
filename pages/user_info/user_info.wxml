@@ -10,7 +10,7 @@
         <view class="flex-x">
           <text class="label">昵称：</text>
           <input wx:if="{{userInfo.nickName}}" class="weui-input" value="{{userInfo.nickName}}" disabled focus placeholder="请输入昵称" />
-          <text wx:else>工具箱</text>
+          <text wx:else>工具大全</text>
         </view>
       </view>
       <view class="user_info-item flex-x">

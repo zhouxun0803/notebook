@@ -1,0 +1,18 @@
+<view class="help">
+  <view class="item">
+    <view class="title form-remark">友情提醒</view>
+    <view class="des">
+      免费工具，为您收集免费的接口服务，做一个api的搬运工，每月更新新的接口。
+    </view>
+  </view>
+  <view class="item">
+    <view class="title form-remark">关注支持</view>
+    <view class="des">
+      关注【勋染】公众号每一个月即可收到新增接口信息您的关注就是对于本站最大的鼓励和支持，谢谢！
+    </view>
+    <view class="flex-y">
+      <image class="qr" src="../../assets/image/qr.jpg" show-menu-by-longpress="{{true}}" />
+    </view>
+    <view class="des">反馈或建议请发送邮件至：<text selectable='true'>dev.zhouxun@outlook.com</text></view>
+  </view>
+</view>

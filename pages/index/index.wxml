@@ -1,7 +1,7 @@
 <view class="content">
   <view class="item-wrap bg-white" wx:for="{{menu_list}}" wx:key="index">
     <navigator class="item flex-x" hover-class="hover-result" url="{{item.path}}?title={{item.title}}&remark={{item.remark}}" data-title="{{item.title}}" bindtap="jumpPage">
-      <image class="image" src="{{item.image}}" mode="aspectFill"></image>
+      <image class="image" src="{{item.image}}" mode="aspectFill" show-menu-by-longpress="{{true}}"></image>
       <view class="con">
         <view class="title">{{item.title}}</view>
         <view class="remark color-9">{{item.remark}}</view>

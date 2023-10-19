@@ -35,7 +35,6 @@
     "pages/version/version",
     "pages/weather/weather",
     "pages/phone/phone",
-    "pages/headline/headline",
     "pages/web_view/web_view",
     "pages/url_revert/url_revert",
     "pages/ip_address/ip_address",
@@ -44,7 +43,8 @@
     "pages/qq_info/qq_info",
     "pages/history/history",
     "pages/food_heat/food_heat",
-    "pages/emoticon/emoticon"
+    "pages/emoticon/emoticon",
+    "pages/help/help"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,45 +1,18 @@
-import {
-  request
-} from "../../utils/http"
+// pages/help/help.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    data: [],
-    title: "",
-    remark: "",
-  },
 
-  formSubmit(e) {
-    this.setData({
-      data: [],
-    })
-    let type = e.detail.value.type;
-    const params = {
-      url: "https://v.juhe.cn/toutiao/index",
-      data: {
-        type,
-        key: "d268884b9b07c0eb9d6093dc54116018",
-      },
-    }
-    request(params).then(res => {
-      console.log(res.data.result.data,33333)
-      this.setData({
-        data: res.data.result.data,
-      })
-    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    this.setData({
-      title: options.title,
-      remark: options.remark,
-    })
+
   },
 
   /**

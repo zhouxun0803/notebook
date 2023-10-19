@@ -16,12 +16,6 @@ Page({
         remark: "自定义地区天气信息查询",
       },
       {
-        path: "/pages/headline/headline",
-        image: "https://cdn.free-api.com/xwtt.webp",
-        title: "新闻头条",
-        remark: "新闻头条：最新新闻头条，各类社会、国内、国际、体育、娱乐、科技等资讯，更新周期5-30分钟",
-      },
-      {
         path: "/pages/url_revert/url_revert",
         image: "https://mkblog.cn/wp-content/uploads/2019/11/20191201_082402_25.png",
         title: "万能短网址还原",
@@ -47,7 +41,7 @@ Page({
       },
       {
         path: "/pages/qq_info/qq_info",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3y4v4Q9MXdPD7I1odJNHYzc2gL_N8PUAg8g&usqp=CAU",
+        image: "https://preview.qiantucdn.com/58pic/20220319/00258PICBT4eX73A2858PIC5D_PIC2018_PIC2018.jpg!qt324new_nowater",
         title: "QQ信息查询",
         remark: "根据QQ号返回QQ昵称，QQ等级等信息",
       },
@@ -69,18 +63,6 @@ Page({
         title: "表情包搜索",
         remark: "再也不会缺图了",
       },
-      // {
-      //   path: "",
-      //   image: "https://cdn.free-api.com/chepaichax.webp",
-      //   title: "车牌号识别",
-      //   remark: "车牌号识别：调用者传入一张图片文件或图片URL，检测并返回图片中车牌框并识别车牌颜色和车牌号。当传入图片中有多个车牌时，按照车牌框大小排序依次输出。",
-      // },
-      // {
-      //   path: "",
-      //   image: "https://cdn.free-api.com/aykik-bluj5.webp",
-      //   title: "今日头条",
-      //   remark: "今日头条：分享今日新鲜事，数据来源今日头条",
-      // },
     ]
   },
   jumpPage(e) {
