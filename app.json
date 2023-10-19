@@ -1,8 +1,50 @@
 {
+  "static": [
+    {
+      "pattern": "pages/donutLogin/donutLogin.*",
+      "platforms": [
+        "mini-ios",
+        "mini-android"
+      ]
+    }
+  ],
+  "mini-ios": {
+    "pages": [
+      "pages/index/index",
+      "pages/message/message",
+      "pages/user_info/user_info",
+      "pages/version/version",
+      "pages/weather/weather",
+      "pages/donutLogin/donutLogin"
+    ]
+  },
+  "mini-android": {
+    "pages": [
+      "pages/index/index",
+      "pages/message/message",
+      "pages/user_info/user_info",
+      "pages/version/version",
+      "pages/weather/weather",
+      "pages/donutLogin/donutLogin"
+    ]
+  },
   "pages": [
     "pages/index/index",
     "pages/message/message",
-    "pages/link/link"
+    "pages/user_info/user_info",
+    "pages/version/version",
+    "pages/weather/weather",
+    "pages/phone/phone",
+    "pages/headline/headline",
+    "pages/web_view/web_view",
+    "pages/url_revert/url_revert",
+    "pages/ip_address/ip_address",
+    "pages/one_day_english/one_day_english",
+    "pages/fan_yi/fan_yi",
+    "pages/qq_info/qq_info",
+    "pages/history/history",
+    "pages/food_heat/food_heat",
+    "pages/emoticon/emoticon"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,25 +54,28 @@
   },
   "tabBar": {
     "color": "#000",
-    "selectedColor": "#F69C21",
+    "selectedColor": "#07c160",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "image/home1.png",
-        "selectedIconPath": "image/home2.png"
+        "iconPath": "assets/image/shouye.png",
+        "selectedIconPath": "assets/image/shouye-copy.png"
       },
       {
         "pagePath": "pages/message/message",
-        "text": "消息",
-        "iconPath": "image/message1.png",
-        "selectedIconPath": "image/message2.png"
+        "text": "我的",
+        "iconPath": "assets/image/my.png",
+        "selectedIconPath": "assets/image/my-copy.png"
       }
     ]
   },
   "usingComponents": {},
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "miniApp": {
+    "useAuthorizePage": true
+  }
 }

@@ -1,0 +1,13 @@
+<view class="wrap">
+  <view class="content">
+    <view class="form-remark color-3">{{remark}}</view>
+    <view wx:if="{{data.length}}" class="data">
+      <view class="item bg-white" wx:for="{{data}}" wx:key="item">
+        <navigator class="data-item" hover-class="hover-result" url="/pages/web_view/web_view?url={{item.link}}&title={{item.title}}">
+          <view class="title color-3">{{item.title}}</view>
+          <view class="info mt10 color-6 text-nowrap">{{item.desc}}</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

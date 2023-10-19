@@ -1,2 +1,52 @@
 <!--pages/message/message.wxml-->
-<text>消息</text>
+<view class="content">
+  <view class="bg-white">
+    <navigator class="header flex-x" hover-class="hover-result" url="/pages/user_info/user_info">
+      <image wx:if="{{userInfo.avatarUrl}}" class="user-photo" mode="aspectFill" src="{{userInfo.avatarUrl}}"></image>
+      <image wx:else class="user-photo" mode="aspectFill" src="../../assets/image/portrait.png"></image>
+      <view class="user-info">
+        <view class="name flex-x">
+          <text wx:if="{{userInfo.nickName}}">{{userInfo.nickName}}</text>
+          <text wx:else>工具箱</text>
+          <text wx:if="{{userInfo.gender==1}}" class="gender iconfont icon-nan" style="color: #10aeff;"></text>
+          <text wx:if="{{userInfo.gender==2}}" class="gender iconfont icon-nv" style="color: #f37e7d;"></text>
+        </view>
+        <view class="brief-introduction">{{userInfo.introduce || "地表最强工具箱"}}</view>
+      </view>
+      <view>
+        <text class="iconfont icon-xiangyou pointer"></text>
+      </view>
+    </navigator>
+  </view>
+  <view class="user_list">
+    <navigator class="user_list-item flex-x" hover-class="hover-result" url="/pages/version/version">
+      <view class="flex-x">
+        <text class="iconfont icon-banben biaoshi logo"></text>
+        <text>关于程序</text>
+      </view>
+      <view class="flex-x">
+        <text class="version">版本号1.1.4</text>
+        <text class="iconfont icon-xiangyou pointer"></text>
+      </view>
+    </navigator>
+    <navigator class="user_list-item flex-x" hover-class="hover-result" url="/pages/web_view/web_view?url=https://mp.weixin.qq.com/s/tuo7G9NEbMLyzNjyxr5QmQ&title=帮助文档">
+      <view class="flex-x">
+        <text class="iconfont icon-bangzhuwendang biaoshi logo"></text>
+        <text>帮助文档</text>
+      </view>
+      <view class="flex-x">
+        <text class="iconfont icon-xiangyou pointer"></text>
+      </view>
+    </navigator>
+    <view wx:if="{{KB}}" class="user_list-item flex-x" hover-class="hover-result" bindtap="clearStorage">
+      <view class="flex-x">
+        <text class="iconfont icon-cunchukongjian biaoshi logo"></text>
+        <text>存储空间</text>
+      </view>
+      <view class="flex-x">
+        <text class="version" decode="{{true}}">{{KB}}&nbsp;KB</text>
+        <text class="iconfont icon-xiangyou pointer"></text>
+      </view>
+    </view>
+  </view>
+</view>

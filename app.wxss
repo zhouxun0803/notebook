@@ -1,1 +1,12 @@
 /**app.wxss**/
+/* 主题色  #409eff */
+@import '/assets/css/app.wxss';
+@import '/assets/iconfont/iconfont.wxss';
+
+page {
+  background: #f9f9f9;
+}
+
+image {
+  background: #f9f9f9;
+}

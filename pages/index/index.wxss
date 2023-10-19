@@ -1,11 +1,44 @@
 /**index.wxss**/
-.container {
-  padding: 0 20rpx 20rpx;
+.content {
+  width: 100%;
+  padding: 15rpx;
+  box-sizing: border-box;
+}
+
+.item-wrap {
+  border-radius: 20rpx;
+}
+
+.item-wrap+.item-wrap {
+  margin-top: 15rpx;
 }
 
 .item {
-  padding: 20rpx;
-  background-color: #ccc;
+  padding: 30rpx;
   border-radius: 20rpx;
-  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+
+.image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.con {
+  width: 85%;
+  margin-left: 20rpx;
+}
+
+.title {
+  font-size: 34rpx;
+}
+
+.remark {
+  margin-top: 4rpx;
+  font-size: 24rpx;
+  white-space: nowrap;
+  /*单行超出显示省略号*/
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

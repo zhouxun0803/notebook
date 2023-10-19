@@ -1,1 +1,72 @@
 /* pages/message/message.wxss */
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+}
+
+.user-photo {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.user-info {
+  flex: 1;
+  padding-left: 30rpx;
+}
+
+.user-info .name {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.user-info .gender {
+  margin-left: 8rpx;
+}
+
+.brief-introduction {
+  font-size: 24rpx;
+  color: #ccc;
+  margin-top: 10rpx;
+  word-break:break-all;
+}
+
+.header .icon-xiangyou {
+  font-size: 70rpx;
+  color: #666;
+}
+
+.user_list {
+  margin-top: 20rpx;
+  flex: 1;
+  background-color: #fff;
+}
+
+.user_list-item {
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f9f9f9;
+  justify-content: space-between;
+  font-size: 32rpx;
+}
+
+.user_list-item .icon-xiangyou {
+  font-size: 60rpx;
+  color: #666;
+}
+
+.version {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.biaoshi {
+  font-size: 30rpx;
+  margin-right: 6rpx;
+}

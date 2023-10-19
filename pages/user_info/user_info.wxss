@@ -1,0 +1,71 @@
+/* pages/user_info/user_info.wxss */
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-photo-wrap {
+  padding: 30rpx;
+  background-color: #fff;
+}
+
+.user-photo {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.form {
+  flex: 1;
+  padding-top: 20rpx;
+  padding-bottom: 120rpx;
+}
+
+.user_info {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.user_info-item {
+  padding: 30rpx;
+  font-size: 32rpx;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #f9f9f9;
+}
+
+.user_info-item .label{
+  width: 105rpx;
+}
+
+.icon-xiangyou {
+  font-size: 60rpx;
+  color: #666;
+}
+
+.gender-radio .wx-radio-input {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.gender-name {
+  margin-right: 30rpx;
+}
+
+.button {
+  width: 100%;
+  height: 120rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.button .btn {
+  width: 80%;
+  height: 80rpx;
+  font-size: 32rpx;
+}

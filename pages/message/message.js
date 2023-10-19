@@ -5,7 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userInfo: wx.getStorageSync('userInfo') || {}, //用于存放获取的用户信息
+    KB: 0,
+  },
 
+  // 清除存储空间
+  clearStorage() {
+    let that = this;
+    wx.showModal({
+      title: '提示',
+      content: '确定删除所有存储数据？',
+      success(res) {
+        if (res.confirm) {
+          wx.clearStorage();
+          that.onShow();
+        } else if (res.cancel) {}
+      }
+    })
   },
 
   /**
@@ -26,7 +42,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    let that = this;
+    wx.getStorageInfo({
+      success(res) {
+        that.setData({
+          KB: res.currentSize,
+        })
+      }
+    })
+    that.setData({
+      userInfo: wx.getStorageSync('userInfo') || {},
+    })
   },
 
   /**

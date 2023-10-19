@@ -1,24 +1,43 @@
-// pages/link/link.js
+import {
+  request
+} from "../../utils/http"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    src: "",
+    data: [],
+    title: "",
+    remark: "",
+  },
+
+  formSubmit(e) {
+    this.setData({
+      data: [],
+    })
+    let keyword = e.detail.value.keyword;
+    const params = {
+      url: "https://api.oioweb.cn/api/search/FoodHeat",
+      data: {
+        keyword,
+      }
+    }
+    request(params).then(res => {
+      console.log(res.data.result)
+      this.setData({
+        data: res.data.result,
+      })
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad(options) {
     this.setData({
-      src: decodeURIComponent(options.src)
-    })
-    console.log(decodeURIComponent(options.src),444)
-    //设置当前标题
-    wx.setNavigationBarTitle({
       title: options.title,
+      remark: options.remark,
     })
   },
 

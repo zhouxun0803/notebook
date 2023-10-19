@@ -1,0 +1,10 @@
+{
+  "adapteByMiniprogram": {
+    "userName": "gh_4fb8a53cab0d"
+  },
+  "identityServiceConfig": {
+    "authorizeMiniprogramType": 1,
+    "miniprogramLoginPath": "pages/donutLogin/donutLogin",
+    "adaptWxLogin": true
+  }
+}

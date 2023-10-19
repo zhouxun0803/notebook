@@ -1,0 +1,111 @@
+/* 主题色 */
+.logo {
+  color: #07c160;
+}
+
+/* 描述色 */
+.info {
+  color: #878D99;
+}
+
+/* 链接色 */
+.link {
+  color: #07c160;
+}
+
+/* 背景主题 */
+.bg-logo {
+  background-color: #07c160;
+}
+
+/* 成功色 */
+.success {
+  color: #3CBD27;
+}
+
+.color-3 {
+  color: #333;
+}
+
+.color-6 {
+  color: #666;
+}
+
+.color-9 {
+  color: #999;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-x-y {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-x {
+  display: flex;
+  align-items: center;
+}
+
+.flex-y {
+  display: flex;
+  justify-content: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.hover-result {
+  background-color: #f2f3f5;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.form-remark {
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+  padding-left: 10rpx;
+  border-left: 5rpx solid #07c160;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* 文本行数限定 */
+.text-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.text-nowrap2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.text-nowrap3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.text-nowrap4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}

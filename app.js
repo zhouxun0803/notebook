@@ -2,9 +2,14 @@
 App({
   onLaunch() {
     // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    // let userInfo = {
+    //   nickName: "开发者",
+    //   avatarUrl: "../../assets/image/portrait.png",
+    //   introduce: "",
+    // };
+    // if (!Object.keys(wx.getStorageSync('userInfo')).length) {
+    //   wx.setStorageSync('userInfo', userInfo)
+    // }
 
     // 登录
     wx.login({
@@ -14,6 +19,6 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    // userInfo: wx.getStorageSync('userInfo') || {},
   }
 })

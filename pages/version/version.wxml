@@ -1,0 +1,15 @@
+<!--pages/version/version.wxml-->
+<view class="version-wrap">
+  <view class="version-item" wx:for="{{versionList}}" wx:key="index">
+    <view class="version-con flex-x">
+      <text class="version logo">{{item.version}}</text>
+      <text class="date">({{item.date}})</text>
+    </view>
+    <view class="description-con">
+      <view class="branch">{{item.branch}}</view>
+      <view class="description">
+        <view wx:for="{{item.description}}" wx:for-item="it" wx:for-index="ind" wx:key="ind">· {{it}}</view>
+      </view>
+    </view>
+  </view>
+</view>

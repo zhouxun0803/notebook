@@ -1,0 +1,30 @@
+<view class="wrap">
+  <view class="content">
+    <view class="form-remark color-3">{{remark}}</view>
+    <form class="form bg-white" bindsubmit="formSubmit">
+      <view class="form-item flex-x">
+        <text class="label">ip地址：</text>
+        <input class="weui-input" type="text" name="ip" placeholder="请输入ip地址" />
+      </view>
+      <button class="save" type="primary" formType="submit">查询</button>
+    </form>
+    <view wx:if="{{data.start}}" class="data bg-white">
+      <view class="data-item">
+        <text class="label color-9">IP段开始：</text>
+        <text>{{data.start}}</text>
+      </view>
+      <view class="data-item">
+        <text class="label color-9">IP段开始：</text>
+        <text>{{data.end}}</text>
+      </view>
+      <view class="data-item">
+        <text class="label color-9">地区：</text>
+        <text>{{data.addr[0]}}</text>
+      </view>
+      <view class="data-item">
+        <text class="label color-9">运营商：</text>
+        <text>{{data.addr[1]}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,7 +1,84 @@
 {
   "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
-  "projectname": "notebook",
+  "projectname": "WX_XCX_ZX",
   "setting": {
-    "compileHotReLoad": true
+    "compileHotReLoad": true,
+    "urlCheck": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/one_day_english/one_day_english",
+          "query": "title=%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A5%E8%8B%B1%E6%96%87&remark=%E6%AF%8F%E6%97%A5%E4%B8%80%E5%8F%A5%E8%8B%B1%E6%96%87%EF%BC%8C%E6%96%B0%E7%9A%84%E4%B8%80%E5%A4%A9%E8%A1%8C%E5%8A%A8%E8%B5%B7%E6%9D%A5%E5%90%A7",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/ip_address/ip_address",
+          "query": "title=IP%E5%9C%B0%E5%9D%80%E6%9F%A5%E8%AF%A2",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/url_revert/url_revert",
+          "query": "title=%E4%B8%87%E8%83%BD%E7%9F%AD%E7%BD%91%E5%9D%80%E8%BF%98%E5%8E%9F",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/headline/headline",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/weather/weather",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/phone/phone",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/message/message",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/message/message",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/user_info/user_info",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/version/version",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }

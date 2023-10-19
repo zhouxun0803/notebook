@@ -1,0 +1,35 @@
+/* pages/version/version.wxss */
+page {
+  background-color: #fff;
+}
+
+.version-wrap {
+  padding: 0 30rpx 30rpx;
+}
+
+.version-con {
+  margin-top: 30rpx;
+  font-size: 36rpx;
+}
+
+.version-con .version {
+  margin-right: 10rpx;
+}
+
+.description-con {
+  margin-top: 20rpx;
+}
+
+.branch {
+  font-size: 30rpx;
+}
+
+.description {
+  font-size: 26rpx;
+  margin-top: 16rpx;
+  padding-left: 10rpx;
+}
+
+.description view {
+  margin-top: 8rpx;
+}

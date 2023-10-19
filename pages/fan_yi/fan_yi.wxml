@@ -1,0 +1,30 @@
+<view class="wrap">
+  <view class="content">
+    <view class="form-remark color-3">{{remark}}</view>
+    <form class="form bg-white" bindsubmit="formSubmit">
+      <view class="form-item flex-x">
+        <text class="label">翻译文字：</text>
+        <input class="weui-input" type="text" name="sourceText" placeholder="请输入翻译文字" />
+      </view>
+      <button class="save" type="primary" formType="submit">查询</button>
+    </form>
+    <view wx:if="{{data.sourceText}}" class="data bg-white">
+      <view class="data-item">
+        <text class="label color-9">输入文本：</text>
+        <text>{{data.sourceText}}</text>
+      </view>
+      <view class="data-item">
+        <text class="label color-9">翻译结果：</text>
+        <text>{{data.targetText}}</text>
+      </view>
+      <view class="data-item">
+        <text class="label color-9">输入语言：</text>
+        <text>{{data.source=="zh"?"中文":"英文"}}</text>
+      </view>
+      <view class="data-item">
+        <text class="label color-9">翻译语言：</text>
+        <text>{{data.target=="zh"?"中文":"英文"}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<view class="wrap">
+  <view class="content">
+    <view class="form-remark color-3">{{remark}}</view>
+    <form class="form bg-white" bindsubmit="formSubmit">
+      <view class="form-item flex-x">
+        <text class="label">短网址：</text>
+        <input class="weui-input" type="text" name="url" placeholder="请输入短网址" />
+      </view>
+      <button class="save" type="primary" formType="submit">查询</button>
+    </form>
+    <view wx:if="{{data.result}}" class="data bg-white">
+      <view class="data-item">
+        <text class="label color-9">真实网址：</text>
+        <text>{{data.result}}</text>
+      </view>
+    </view>
+  </view>
+</view>
