@@ -3,11 +3,10 @@
   <view class="bg-white">
     <navigator class="header flex-x" hover-class="hover-result" url="/pages/user_info/user_info">
       <image wx:if="{{userInfo.avatarUrl}}" class="user-photo" mode="aspectFill" src="{{userInfo.avatarUrl}}"></image>
-      <image wx:else class="user-photo" mode="aspectFill" src="../../assets/image/portrait.png"></image>
+      <image wx:else class="user-photo" mode="aspectFill" src="/assets/image/logo.png"></image>
       <view class="user-info">
         <view class="name flex-x">
-          <text wx:if="{{userInfo.nickName}}">{{userInfo.nickName}}</text>
-          <text wx:else>工具大全</text>
+          <text>{{userInfo.nickName || "勋染"}}</text>
           <text wx:if="{{userInfo.gender==1}}" class="gender iconfont icon-nan" style="color: #10aeff;"></text>
           <text wx:if="{{userInfo.gender==2}}" class="gender iconfont icon-nv" style="color: #f37e7d;"></text>
         </view>

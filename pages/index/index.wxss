@@ -20,12 +20,12 @@
 }
 
 .image {
-  width: 70rpx;
-  height: 70rpx;
+  width: 100rpx;
+  height: 100rpx;
 }
 
 .con {
-  width: 85%;
+  width: 80%;
   margin-left: 20rpx;
 }
 
@@ -41,4 +41,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.grade {
+  text-align: right;
+  color: #ff5e00;
 }

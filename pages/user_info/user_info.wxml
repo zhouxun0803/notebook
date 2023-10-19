@@ -1,36 +1,29 @@
-<!--pages/user_info/user_info.wxml-->
 <view class="content">
   <view class="user-photo-wrap flex-y">
     <image wx:if="{{userInfo.avatarUrl}}" class="user-photo" mode="aspectFill" src="{{userInfo.avatarUrl}}"></image>
-    <image wx:else class="user-photo" mode="aspectFill" src="../../assets/image/portrait.png" bindtap="login"></image>
+    <image wx:else class="user-photo" mode="aspectFill" src="/assets/image/logo.png" bindtap="login"></image>
   </view>
   <form class="form" catchsubmit="formSubmit">
     <view class="user_info">
       <view class="user_info-item flex-x">
-        <view class="flex-x">
-          <text class="label">昵称：</text>
-          <input wx:if="{{userInfo.nickName}}" class="weui-input" value="{{userInfo.nickName}}" disabled focus placeholder="请输入昵称" />
-          <text wx:else>工具大全</text>
-        </view>
+        <text class="label">昵称：</text>
+        <input wx:if="{{userInfo.nickName}}" class="weui-input" value="{{userInfo.nickName}}" disabled placeholder="请输入昵称" />
+        <text wx:else>勋染</text>
       </view>
       <view class="user_info-item flex-x">
-        <view class="flex-x">
-          <text class="label">简介：</text>
-          <input class="weui-input" value="{{userInfo.introduce}}" name="input" bindinput="introduceInput" placeholder="请输入简介" />
-        </view>
+        <text class="label">简介：</text>
+        <input class="weui-input" value="{{userInfo.introduce}}" name="input" maxlength="50" bindinput="introduceInput" placeholder="请输入简介" />
       </view>
       <view class="user_info-item flex-x">
-        <view class="flex-x">
-          <text class="label">性别：</text>
-          <radio-group class="flex-x" name="radio" bindchange="genderRadioChange">
-            <label wx:for="{{genderList}}" wx:key="index">
-              <view class="gender flex-x">
-                <radio class="gender-radio" value="{{item.id}}" checked="{{item.checked}}" />
-                <view class="gender-name">{{item.name}}</view>
-              </view>
-            </label>
-          </radio-group>
-        </view>
+        <text class="label">性别：</text>
+        <radio-group class="flex-x" name="radio" bindchange="genderRadioChange">
+          <label wx:for="{{genderList}}" wx:key="index">
+            <view class="gender flex-x">
+              <radio class="gender-radio" value="{{item.id}}" checked="{{item.checked}}" />
+              <view class="gender-name">{{item.name}}</view>
+            </view>
+          </label>
+        </radio-group>
       </view>
     </view>
     <view class="button flex-x">

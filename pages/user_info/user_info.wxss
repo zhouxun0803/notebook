@@ -32,7 +32,6 @@
 .user_info-item {
   padding: 30rpx;
   font-size: 32rpx;
-  justify-content: space-between;
   border-bottom: 1rpx solid #f9f9f9;
 }
 
@@ -69,3 +68,7 @@
   height: 80rpx;
   font-size: 32rpx;
 }
+
+.weui-input{
+   flex: 1;
+} 

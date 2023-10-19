@@ -1,0 +1,29 @@
+<view class="content">
+  <image class="bgImg" src="{{bgImg}}" />
+  <view class="box">
+    <view class="grade flex-y">
+    <image class="grade-img" src="/assets/image/grade.png"/>
+    <text>{{grade}}</text>
+    </view>
+    <view class="feature">
+      <view class="item" data-type="+" bindtap="openDialog">加</view>
+      <view class="item" data-type="-" bindtap="openDialog">减</view>
+      <view class="item" data-type="random" bindtap="openDialog">随机</view>
+      <view class="item" data-type="*" bindtap="openDialog">乘</view>
+      <view class="item" data-type="/" bindtap="openDialog">除</view>
+    </view>
+  </view>
+</view>
+<!-- 弹窗 -->
+<view wx:if="{{dialogVisible}}" class="mask">
+  <view class="dialog bg-white">
+    <text class="close iconfont icon-chahao logo" catchtap="close"></text>
+    <form catchsubmit="formSubmit">
+      <view class="dialog-con flex-x">
+        <view class="num">{{front}}<text class="logo">{{type}}</text>{{queen}}<text class="logo">=？</text></view>
+        <input name="result" value="{{result}}" type="number" focus placeholder="请输入结果" />
+        <button type="primary" formType="submit">确定</button>
+      </view>
+    </form>
+  </view>
+</view>

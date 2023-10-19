@@ -1,9 +1,12 @@
-// index.js
-const http = require('../.././utils/http')
-const ui = require('../.././utils/ui')
 Page({
   data: {
     menu_list: [{
+        path: "/pages/calculate/calculate",
+        image: "/assets/image/calculate-icon.png",
+        bgImg: "/assets/image/calculate-bg.png",
+        title: "加减乘除速算",
+        remark: "速算的本质是记忆力和计算力",
+      }, {
         path: "/pages/phone/phone",
         image: "https://cdn.free-api.com/sjhmgsdjh.1.png",
         title: "手机号归属地查询",
@@ -63,7 +66,8 @@ Page({
         title: "表情包搜索",
         remark: "再也不会缺图了",
       },
-    ]
+    ],
+    grades: {},
   },
   jumpPage(e) {
     wx.setNavigationBarTitle({
@@ -71,6 +75,14 @@ Page({
     })
   },
   onLoad() {
-
+    this.setData({
+      grades: wx.getStorageSync('grades'),
+    })
+  },
+  onUnload() {
+    console.log(33333)
+    this.setData({
+      grades: wx.getStorageSync('grades'),
+    })
   },
 })

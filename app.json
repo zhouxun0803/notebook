@@ -44,7 +44,8 @@
     "pages/history/history",
     "pages/food_heat/food_heat",
     "pages/emoticon/emoticon",
-    "pages/help/help"
+    "pages/help/help",
+    "pages/calculate/calculate"
   ],
   "window": {
     "backgroundTextStyle": "light",

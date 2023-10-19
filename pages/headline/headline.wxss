@@ -1,0 +1,45 @@
+.wrap {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.form {
+  display: block;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+}
+
+.form-item {
+  border-bottom: 1rpx solid #f9f9f9;
+  font-size: 30rpx;
+  display: flex;
+}
+
+.form-item .weui-input {
+  padding: 20rpx 0;
+  flex: 1;
+}
+
+.save {
+  margin-top: 30rpx;
+}
+
+.data .item {
+  border-radius: 20rpx;
+}
+
+.data-item {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.data-item .title{
+  font-size: 30rpx;
+}
+.data-item .info{
+  margin-top: 10rpx;
+  font-size: 24rpx;
+}

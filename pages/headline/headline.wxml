@@ -1,0 +1,23 @@
+<view class="wrap">
+  <view class="content">
+    <view class="form-remark color-3">{{remark}}</view>
+    <form class="form bg-white" bindsubmit="formSubmit">
+      <view class="form-item flex-x">
+        <text class="label">新闻类型：</text>
+        <input class="weui-input" type="text" name="type" placeholder="请输入新闻类型" />
+      </view>
+      <button class="save" type="primary" formType="submit">查询</button>
+    </form>
+    <view wx:if="{{data.length}}" class="data">
+      <view class="item bg-white" wx:for="{{data}}" wx:key="uniquekey">
+        <navigator class="data-item" hover-class="hover-result" url="/pages/web_view/web_view?url={{item.url}}&title={{item.title}}">
+          <view class="title color-3">{{item.title}}</view>
+          <view class="info mt10 color-6">
+            <text>{{item.author_name}} </text>
+            <text>{{item.date}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

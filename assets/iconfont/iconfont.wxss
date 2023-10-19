@@ -1,8 +1,9 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 4016486 */
-  src: url('//at.alicdn.com/t/c/font_4016486_49cyc8pkjpx.woff2?t=1681962115102') format('woff2'),
-       url('//at.alicdn.com/t/c/font_4016486_49cyc8pkjpx.woff?t=1681962115102') format('woff'),
-       url('//at.alicdn.com/t/c/font_4016486_49cyc8pkjpx.ttf?t=1681962115102') format('truetype');
+  font-family: 'iconfont';
+  /* Project id 4016486 */
+  src: url('//at.alicdn.com/t/c/font_4016486_ser14pqgad9.woff2?t=1697699549363') format('woff2'),
+    url('//at.alicdn.com/t/c/font_4016486_ser14pqgad9.woff?t=1697699549363') format('woff'),
+    url('//at.alicdn.com/t/c/font_4016486_ser14pqgad9.ttf?t=1697699549363') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +12,11 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-chahao:before {
+  content: "\e668";
 }
 
 .icon-cunchukongjian:before {
