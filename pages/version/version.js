@@ -6,6 +6,11 @@ Page({
    */
   data: {
     versionList: [{
+        version: "1.1.6",
+        date: "2023-10-20",
+        branch: "Features",
+        description: ["加减乘除速算功能开发"]
+      }, {
         version: "1.1.5",
         date: "2023-10-19",
         branch: "Features",

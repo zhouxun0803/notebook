@@ -24,7 +24,7 @@
         <text>关于程序</text>
       </view>
       <view class="flex-x">
-        <text class="version">版本号1.1.5</text>
+        <text class="version">版本号1.1.6</text>
         <text class="iconfont icon-xiangyou pointer"></text>
       </view>
     </navigator>
