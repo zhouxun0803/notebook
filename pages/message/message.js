@@ -52,7 +52,6 @@ Page({
         })
       }
     })
-    console.log(wx.getStorageSync('userInfo'), 3333)
     that.setData({
       userInfo: wx.getStorageSync('userInfo') || {},
     })

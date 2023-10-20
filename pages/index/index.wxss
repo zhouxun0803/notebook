@@ -36,14 +36,4 @@
 .remark {
   margin-top: 4rpx;
   font-size: 24rpx;
-  white-space: nowrap;
-  /*单行超出显示省略号*/
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.grade {
-  text-align: right;
-  color: #ff5e00;
 }

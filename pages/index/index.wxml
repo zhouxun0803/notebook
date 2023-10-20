@@ -4,9 +4,8 @@
       <image class="image" src="{{item.image}}" mode="aspectFill" show-menu-by-longpress="{{true}}"></image>
       <view class="con">
         <view class="title">{{item.title}}</view>
-        <view class="remark color-9">{{item.remark}}</view>
+        <view class="remark color-9 text-nowrap">{{item.remark}}</view>
       </view>
-      <view wx:if="{{grades[index+1]}}" class="grade nowrap">{{grades[index+1]}}分</view>
     </navigator>
   </view>
 </view>

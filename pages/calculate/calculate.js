@@ -25,8 +25,9 @@ Page({
     this.setData({
       dialogVisible: true,
       type: type == "random" ? operation[index] : type,
-      front: Math.round(Math.random() * 89) + 10,
-      queen: Math.round(Math.random() * 8) + 1,
+    })
+    wx.nextTick(() => {
+      this.getRandomNumbers(this.data.type);
     })
   },
 
@@ -44,19 +45,19 @@ Page({
       queen
     } = this.data;
     if (type == '+' && front + queen == result) {
-      this.getRandom();
+      this.getResult();
       return;
     }
     if (type == '-' && front - queen == result) {
-      this.getRandom();
+      this.getResult();
       return;
     }
     if (type == '*' && front * queen == result) {
-      this.getRandom();
+      this.getResult();
       return;
     }
     if (type == '/' && front / queen == result) {
-      this.getRandom();
+      this.getResult();
       return;
     }
     this.setData({
@@ -68,16 +69,37 @@ Page({
     })
   },
 
-  getRandom() {
+  getResult() {
     this.setData({
       result: "",
-      front: Math.round(Math.random() * 89) + 10,
-      queen: Math.round(Math.random() * 8) + 1,
       grade: this.data.grade + 1,
     })
     const grades = wx.getStorageSync('grades') || {};
     grades[this.data.id] = this.data.grade;
     wx.setStorageSync('grades', grades);
+    wx.nextTick(() => {
+      this.getRandomNumbers(this.data.type);
+    })
+  },
+
+  getRandomNumbers(type) {
+    let num1, num2;
+    if (type === "/") {
+      let min = 1;
+      let max = 100;
+      // 生成两个随机的数，保证它们的商为正整数
+      num1 = Math.floor(Math.random() * (max - min + 1)) + min;
+      num2 = Math.floor(Math.random() * (max - min + 1)) + min;
+      while (num1 % num2 !== 0) {
+        num2 = Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+    }
+    wx.nextTick(() => {
+      this.setData({
+        front: num1 || Math.round(Math.random() * 89) + 10,
+        queen: num2 || Math.round(Math.random() * 8) + 1,
+      })
+    })
   },
 
   /**
