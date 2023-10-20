@@ -22,6 +22,7 @@
 .image {
   width: 100rpx;
   height: 100rpx;
+  border-radius: 20rpx;
 }
 
 .con {

@@ -4,10 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    title: "",
-    remark: "",
     id: "",
-    bgImg: "",
     dialogVisible: false,
     type: "",
     front: "",
@@ -60,19 +57,23 @@ Page({
       this.getResult();
       return;
     }
-    this.setData({
-      result: "",
-    })
+    this.getResult("error");
     wx.showToast({
       title: "错误",
       icon: 'error',
     })
   },
 
-  getResult() {
+  getResult(type) {
+    let grade = 0;
+    if (type === "error") {
+      grade = this.data.grade - 1;
+    } else {
+      grade = this.data.grade + 1;
+    }
     this.setData({
       result: "",
-      grade: this.data.grade + 1,
+      grade,
     })
     const grades = wx.getStorageSync('grades') || {};
     grades[this.data.id] = this.data.grade;
@@ -107,9 +108,6 @@ Page({
    */
   onLoad(options) {
     this.setData({
-      title: options.title,
-      remark: options.remark,
-      bgImg: options.bgImg,
       grade: wx.getStorageSync('grades')[options.id] || 0,
       id: options.id,
     })

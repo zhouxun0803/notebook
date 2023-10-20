@@ -1,5 +1,5 @@
 <view class="content">
-  <image class="bgImg" src="{{bgImg}}" />
+  <image class="bgImg" src="/assets/image/calculate-bg.png" />
   <view class="box">
     <view class="grade flex-y">
     <image class="grade-img" src="/assets/image/grade.png"/>
