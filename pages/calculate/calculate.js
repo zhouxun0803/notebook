@@ -11,20 +11,28 @@ Page({
     queen: "",
     result: "",
     grade: "",
+    random: false,
   },
 
   openDialog(e) {
     let type = e.target.dataset.type;
+    this.getOperation(type);
+    this.setData({
+      dialogVisible: true,
+    })
+    wx.nextTick(() => {
+      this.getRandomNumbers(this.data.type);
+    })
+  },
+
+  getOperation(type) {
     if (type == "random") {
       var operation = ["+", "-", "*", "/"];
       var index = Math.round(Math.random() * operation.length);
     }
     this.setData({
-      dialogVisible: true,
+      random: type == "random",
       type: type == "random" ? operation[index] : type,
-    })
-    wx.nextTick(() => {
-      this.getRandomNumbers(this.data.type);
     })
   },
 
@@ -75,6 +83,7 @@ Page({
       result: "",
       grade,
     })
+    if (this.data.random) this.getOperation("random");
     const grades = wx.getStorageSync('grades') || {};
     grades[this.data.id] = this.data.grade;
     wx.setStorageSync('grades', grades);
@@ -85,21 +94,34 @@ Page({
 
   getRandomNumbers(type) {
     let num1, num2;
-    if (type === "/") {
-      let min = 1;
-      let max = 100;
-      // 生成两个随机的数，保证它们的商为正整数
-      num1 = Math.floor(Math.random() * (max - min + 1)) + min;
-      num2 = Math.floor(Math.random() * (max - min + 1)) + min;
-      while (num1 % num2 !== 0) {
-        num2 = Math.floor(Math.random() * (max - min + 1)) + min;
-      }
+    switch (type) {
+      case "+":
+        num1 = Math.round(Math.random() * 98) + 1;
+        num2 = Math.round(Math.random() * 98) + 1;
+        break;
+      case "-":
+        const minus = Math.round(Math.random() * 97) + 2;
+        num1 = minus;
+        num2 = Math.round(Math.random() * (minus - 2)) + 1;
+        break;
+      case "*":
+        num1 = Math.round(Math.random() * 98) + 1;
+        num2 = Math.round(Math.random() * 98) + 1;
+        break;
+      case "/":
+        let min = 1;
+        let max = 100;
+        // 生成两个随机的数，保证它们的商为正整数
+        num1 = Math.round(Math.random() * (max - min + 1)) + min;
+        num2 = Math.round(Math.random() * (max - min + 1)) + min;
+        while (num1 % num2 !== 0) {
+          num2 = Math.round(Math.random() * (max - min + 1)) + min;
+        }
+        break;
     }
-    wx.nextTick(() => {
-      this.setData({
-        front: num1 || Math.round(Math.random() * 89) + 10,
-        queen: num2 || Math.round(Math.random() * 8) + 1,
-      })
+    this.setData({
+      front: num1,
+      queen: num2,
     })
   },
 
