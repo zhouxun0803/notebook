@@ -4,7 +4,6 @@
     "pages/message/message",
     "pages/user_info/user_info",
     "pages/version/version",
-    "pages/web_view/web_view",
     "pages/help/help",
     "pages/calculate/calculate"
   ],

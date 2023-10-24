@@ -1,6 +1,6 @@
 <view class="help">
   <view class="item">
-    <view class="title form-remark">友情提醒</view>
+    <view class="title form-remark">功能介绍</view>
     <view class="des">
       这款小程序是从儿童的角度出发，通过简单而有趣的游戏方式，锻炼儿童的记忆力和大脑的反应能力。
     </view>
@@ -10,9 +10,26 @@
     <view class="des">
       关注【勋染】公众号每一个月即可收到新增功能，您的关注就是对于我最大的鼓励和支持，谢谢！
     </view>
+  </view>
+  <view class="item">
+    <view class="title form-remark">联系我们</view>
+    <view class="des">反馈或建议请发送邮件至：<text selectable='true'>dev.zhouxun@outlook.com</text></view>
+    <view class="btn flex-y">
+      <button class="flex-x" size="mini" type="primary" plain open-type="contact" session-from="sessionFrom">
+        <view class="flex-x">
+          <text class="iconfont icon-zaixiankefu"></text>联系客服
+        </view>
+      </button>
+      <button size="mini" type="primary" plain bindtap="tapQr">
+        <view class="flex-x">
+          <text class="iconfont icon-gongzhonghao"></text>关注公众号
+        </view>
+      </button>
+    </view>
+  </view>
+  <page-container show="{{showQr}}" overlay="{{true}}" round="{{true}}" close-on-slideDown="{{true}}" bind:beforeenter="beforeenter" bind:enter="enter" bind:afterenter="afterenter" bind:beforeleave="beforeleave" bind:leave="leave" bind:afterleave="afterleave" bind:clickoverlay="clickoverlay">
     <view class="flex-y">
       <image class="qr" src="../../assets/image/qr.jpg" show-menu-by-longpress="{{true}}" />
     </view>
-    <view class="des">反馈或建议请发送邮件至：<text selectable='true'>dev.zhouxun@outlook.com</text></view>
-  </view>
+  </page-container>
 </view>

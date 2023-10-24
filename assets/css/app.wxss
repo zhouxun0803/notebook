@@ -69,9 +69,8 @@
 
 .form-remark {
   font-size: 24rpx;
-  margin-bottom: 20rpx;
-  padding-left: 10rpx;
-  border-left: 5rpx solid #07c160;
+  padding-left: 15rpx;
+  border-left: 6rpx solid #07c160;
 }
 
 .nowrap {
