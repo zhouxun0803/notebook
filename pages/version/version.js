@@ -9,7 +9,7 @@ Page({
         version: "1.1.8",
         date: "2023-11-16",
         branch: "Hotfix",
-        description: ["去掉获取用户信息"]
+        description: ["去掉获取用户信息", "基本信息优化"]
       },
       {
         version: "1.1.7",

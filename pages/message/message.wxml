@@ -2,15 +2,14 @@
 <view class="content">
   <view class="bg-white">
     <navigator class="header flex-x" hover-class="hover-result" url="/pages/user_info/user_info">
-      <image wx:if="{{userInfo.avatarUrl}}" class="user-photo" mode="aspectFill" src="{{userInfo.avatarUrl}}"></image>
-      <image wx:else class="user-photo" mode="aspectFill" src="/assets/image/logo.png"></image>
+      <image class="user-photo" mode="aspectFill" src="/assets/image/logo.png"></image>
       <view class="user-info">
         <view class="name flex-x">
-          <text>{{userInfo.nickName || "勋染"}}</text>
+          <text>{{userInfo.nickName}}</text>
           <text wx:if="{{userInfo.gender==1}}" class="gender iconfont icon-nan" style="color: #10aeff;"></text>
           <text wx:if="{{userInfo.gender==2}}" class="gender iconfont icon-nv" style="color: #f37e7d;"></text>
         </view>
-        <view class="brief-introduction">{{userInfo.introduce || "地表最强工具箱"}}</view>
+        <view class="brief-introduction">{{userInfo.introduce}}</view>
       </view>
       <view>
         <text class="iconfont icon-xiangyou pointer"></text>

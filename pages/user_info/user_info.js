@@ -5,34 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: wx.getStorageSync('userInfo') || {}, //用于存放获取的用户信息
-    genderList: [{
-        id: 1,
-        name: '男',
-        checked: false,
-      },
-      {
-        id: 2,
-        name: '女',
-        checked: false,
-      }
-    ],
-  },
-
-  introduceInput(e) {
-    this.setData({
-      'userInfo.introduce': e.detail.value,
-    })
-  },
-
-  genderRadioChange(e) {
-    this.setData({
-      'userInfo.gender': e.detail.value,
-    })
+    userInfo: {}, //用于存放获取的用户信息
   },
 
   formSubmit(e) {
-    wx.setStorageSync('userInfo', this.data.userInfo);
+    const userInfo = e.detail.value;
+    wx.setStorageSync('userInfo', {
+      nickName: userInfo.nickName || "勋染",
+      introduce: userInfo.introduce || "地表最强工具箱",
+      gender: userInfo.gender || 1,
+    });
     wx.showToast({
       title: '成功',
       icon: 'none',
@@ -49,13 +31,6 @@ Page({
   onLoad(options) {
     this.setData({
       userInfo: wx.getStorageSync('userInfo') || {},
-    })
-    let newGenderList = this.data.genderList.map(item => {
-      if (item.id == this.data.userInfo.gender) item.checked = true;
-      return item
-    })
-    this.setData({
-      genderList: newGenderList,
     })
   },
 
