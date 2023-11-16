@@ -19,24 +19,6 @@ Page({
     ],
   },
 
-  login() {
-    if (Object.keys(this.data.userInfo).length > 5) return;
-    wx.getUserProfile({
-      desc: '必须授权才能继续使用', // 必填 声明获取用户个人信息后的用途，后续会展示在弹窗中
-      success: (res) => {
-        console.log('授权成功', res, this.data.userInfo);
-        if (res.userInfo.gender < 1 && this.data.userInfo.gender > 0) res.userInfo.gender = this.data.userInfo.gender;
-        wx.setStorageSync('userInfo', Object.assign(this.data.userInfo, res.userInfo));
-        this.setData({
-          userInfo: wx.getStorageSync('userInfo') || {},
-        })
-      },
-      fail: (err) => {
-        console.log('授权失败', err);
-      }
-    })
-  },
-
   introduceInput(e) {
     this.setData({
       'userInfo.introduce': e.detail.value,

@@ -1,7 +1,6 @@
 <view class="content">
   <view class="user-photo-wrap flex-y">
-    <image wx:if="{{userInfo.avatarUrl}}" class="user-photo" mode="aspectFill" src="{{userInfo.avatarUrl}}"></image>
-    <image wx:else class="user-photo" mode="aspectFill" src="/assets/image/logo.png" bindtap="login"></image>
+    <image class="user-photo" mode="aspectFill" src="/assets/image/logo.png"></image>
   </view>
   <form class="form" catchsubmit="formSubmit">
     <view class="user_info">

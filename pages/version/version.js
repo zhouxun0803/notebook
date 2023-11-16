@@ -6,6 +6,12 @@ Page({
    */
   data: {
     versionList: [{
+        version: "1.1.8",
+        date: "2023-11-16",
+        branch: "Hotfix",
+        description: ["去掉获取用户信息"]
+      },
+      {
         version: "1.1.7",
         date: "2023-10-23",
         branch: "Hotfix",
