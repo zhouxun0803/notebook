@@ -35,7 +35,7 @@
   border-bottom: 1rpx solid #f9f9f9;
 }
 
-.user_info-item .label{
+.user_info-item .label {
   width: 105rpx;
 }
 
@@ -64,7 +64,3 @@
   height: 80rpx;
   font-size: 32rpx;
 }
-
-.weui-input{
-   flex: 1;
-} 

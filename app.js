@@ -1,13 +1,6 @@
 // app.js
 App({
   onLaunch() {
-    const userInfo = wx.getStorageSync('userInfo');
-    wx.setStorageSync('userInfo', {
-      nickName: userInfo.nickName || "勋染",
-      introduce: userInfo.introduce || "地表最强工具箱",
-      gender: userInfo.gender || 1,
-    });
-
     this.overShare();
   },
   overShare: function () {

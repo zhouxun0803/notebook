@@ -9,12 +9,7 @@ Page({
   },
 
   formSubmit(e) {
-    const userInfo = e.detail.value;
-    wx.setStorageSync('userInfo', {
-      nickName: userInfo.nickName || "勋染",
-      introduce: userInfo.introduce || "地表最强工具箱",
-      gender: userInfo.gender || 1,
-    });
+    wx.setStorageSync('userInfo', e.detail.value);
     wx.showToast({
       title: '成功',
       icon: 'none',
@@ -29,8 +24,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    const userInfo = wx.getStorageSync('userInfo');
     this.setData({
-      userInfo: wx.getStorageSync('userInfo') || {},
+      userInfo: {
+        nickName: userInfo.nickName || "勋染",
+        introduce: userInfo.introduce || "地表最强工具箱",
+        gender: userInfo.gender || 1,
+      },
     })
   },
 
