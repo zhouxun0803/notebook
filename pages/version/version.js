@@ -6,6 +6,16 @@ Page({
    */
   data: {
     versionList: [{
+        version: "1.1.10",
+        date: "2023-11-30",
+        branch: "Features",
+        description: ["计算器", "时钟", "二维码生成器"]
+      }, {
+        version: "1.1.9",
+        date: "2023-11-29",
+        branch: "Features",
+        description: ["麻将筛子", "涂鸦"]
+      }, {
         version: "1.1.8",
         date: "2023-11-16",
         branch: "Hotfix",

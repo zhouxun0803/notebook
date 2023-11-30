@@ -5,7 +5,13 @@
     "pages/user_info/user_info",
     "pages/version/version",
     "pages/help/help",
-    "pages/calculate/calculate"
+    "pages/calculate/calculate",
+    "pages/dice/dice",
+    "pages/graffiti/graffiti",
+    "pages/calculator/index/index",
+    "pages/calculator/super/super",
+    "pages/canvas_clock/canvas_clock",
+    "pages/qrcode/qrcode"
   ],
   "window": {
     "backgroundTextStyle": "light",
