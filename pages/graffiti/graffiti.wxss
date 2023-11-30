@@ -14,7 +14,6 @@ page {
   flex: 1;
   background-color: #fff;
   margin-bottom: 10rpx;
-  z-index: 0;
 }
 
 .myCanvas {

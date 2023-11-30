@@ -2,7 +2,7 @@
   <!--画布区域-->
   <view class="canvas_area">
     <!--注意：同一页面中的 canvas-id 不可重复，如果使用一个已经出现过的 canvas-id，该 canvas 标签对应的画布将被隐藏并不再正常工作-->
-    <canvas canvas-id="myCanvas" class="myCanvas" disable-scroll="false" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+    <canvas canvas-id="myCanvas" class="myCanvas" disable-scroll="false" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" style="display: {{isShowCanvas?'block':'none'}};">
     </canvas>
   </view>
   <!--画布工具区域-->
@@ -17,5 +17,5 @@
       <view class="box flex-x-y" bindtap="colorSelect" bindtap="tapQick" style="background: #ccc; color: {{color}};">颜色</view>
     </view>
   </scroll-view>
-  <color-picker bindchangeColor="pickColor" initColor="{{color}}" show="{{pick}}" style="z-index: 9999;" />
+  <color-picker bindchangeColor="pickColor" bindclose="pickClose" initColor="{{color}}" show="{{pick}}" />
 </view>

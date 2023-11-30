@@ -3,18 +3,25 @@ Page({
     pen: 5, //画笔粗细默认值
     color: 'rgb(28,28,28)', //画笔颜色默认值
     pick: false,
+    isShowCanvas: true,
   },
   tapQick() {
     this.setData({
-      pick: true
+      isShowCanvas: false,
+      pick: true,
     });
   },
   //选择改色时触发（在左侧色盘触摸或者切换右侧色相条）
   pickColor(e) {
-    console.log(e, 333)
     //返回的信息在e.detail.colorData中
     this.setData({
-      color: e.detail.color
+      color: e.detail.color,
+    })
+  },
+  // 关闭弹框
+  pickClose() {
+    this.setData({
+      isShowCanvas: true,
     })
   },
   startX: 0, //保存X坐标轴变量
